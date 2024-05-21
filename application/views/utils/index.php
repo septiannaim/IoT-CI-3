@@ -105,8 +105,8 @@
                 </div>
             </div>
         </div>
-
     </div>
+
     <div class="row mt-4">
         <div class="col-lg-7 mb-lg-0 mb-4">
             <div class="card z-index-2 h-100">
@@ -136,8 +136,6 @@
                         <div class="carousel-item h-100  ">
                             <h6 class="text-capitalize text-center mt-6">Jarak </h6>
                             <canvas id="linear-id" class="mx-auto d-block" style="max-width: 300px;"></canvas>
-
-
                         </div>
                         <div class="carousel-item h-100">
                             <h6 class="text-capitalize text-center mt-3">Temperature</h6>

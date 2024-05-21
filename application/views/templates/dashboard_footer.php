@@ -13,7 +13,7 @@
          renderTo: 'gauge-chart',
          width: 300,
          height: 300,
-         units: "Cm",
+         units: "C",
          minValue: 0,
          startAngle: 90,
          ticksAngle: 180,
@@ -195,6 +195,7 @@
          setInterval(fetchDataAndUpdateGauge2, 2000);
      });
  </script>
+
  <script>
      var gauge3 = new LinearGauge({
          renderTo: 'temperature-id',
@@ -296,7 +297,6 @@
  </script>
 
  <!--ajax untuk realtime -->
-
  <script>
      $(document).ready(function() {
          // Set interval waktu untuk realtime
@@ -316,6 +316,7 @@
          }, 1000); // Interval waktu dalam milidetik (1000 ms = 1 detik)
      });
  </script>
+
  <script>
      $(document).ready(function() {
          // Set interval waktu untuk realtime
@@ -335,6 +336,7 @@
          }, 1000); // Interval waktu dalam milidetik (1000 ms = 1 detik)
      });
  </script>
+
  <script>
      $(document).ready(function() {
          // Set interval waktu untuk realtime

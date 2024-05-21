@@ -18,7 +18,7 @@ class Pages extends CI_Controller
         $data['sensor_jarak'] = $this->M_Monitoring->get_last_5_jarak();
         $data['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
-        $this->load->view('templates/dahsboard_header');
+        $this->load->view('templates/dashboard_header');
         $this->load->view('templates/sidebar');
         $this->load->view('utils/index', $data);
         $this->load->view('templates/dashboard_footer');
@@ -28,7 +28,7 @@ class Pages extends CI_Controller
     {
         $data['suhu_kelembaban'] = $this->M_Monitoring->get_last_5_suhu();
         $data['sensor_jarak'] = $this->M_Monitoring->get_last_5_jarak();
-        $this->load->view('templates/dahsboard_header');
+        $this->load->view('templates/dashboard_header');
         $this->load->view('templates/sidebar');
         $this->load->view('utils/tables', $data);
         $this->load->view('templates/dashboard_footer');
