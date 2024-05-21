@@ -14,6 +14,8 @@ class Pages extends CI_Controller
     public function index()
     {
         $data['title'] = 'Dashboard';
+        $data['suhu_kelembaban'] = $this->M_Monitoring->get_last_5_suhu();
+        $data['sensor_jarak'] = $this->M_Monitoring->get_last_5_jarak();
         $data['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
         $this->load->view('templates/dahsboard_header');
@@ -24,9 +26,11 @@ class Pages extends CI_Controller
 
     public function tables()
     {
+        $data['suhu_kelembaban'] = $this->M_Monitoring->get_last_5_suhu();
+        $data['sensor_jarak'] = $this->M_Monitoring->get_last_5_jarak();
         $this->load->view('templates/dahsboard_header');
         $this->load->view('templates/sidebar');
-        $this->load->view('utils/tables');
+        $this->load->view('utils/tables', $data);
         $this->load->view('templates/dashboard_footer');
     }
 }
